@@ -23,8 +23,8 @@
             "assets": [],
             "styles": ["src/global_styles.css"],
             "scripts": [],
-            "deployUrl": "/Viettel/",
-            "baseHref": "/Viettel/"
+            "deployUrl": "/",
+            "baseHref": "/"
           },
           "configurations": {
             "production": {

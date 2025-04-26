@@ -14,7 +14,7 @@ import { ViewportScroller } from '@angular/common';
       <div class="container header-container">
         <div class="logo">
           <a routerLink="/">
-            <img src="https://i.imgur.com/Crdao3m.png" alt="Viettel Logo" />
+            <img src="https://viettel.com.vn/media/viettel/original_images/Viettel_logo_2021.png" alt="Viettel Logo" />
           </a>
         </div>
         

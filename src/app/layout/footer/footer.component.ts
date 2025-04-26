@@ -16,7 +16,7 @@ import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg
         <div class="footer-content">
           <div class="footer-column">
             <div class="footer-logo">
-              <img src="https://i.imgur.com/Crdao3m.png" alt="Viettel Logo" />
+              <img src="https://viettel.com.vn/media/viettel/original_images/Viettel_logo_2021.png" alt="Viettel Logo" />
             </div>
             <p>Tập đoàn Công nghiệp - Viễn thông Quân đội</p>
             <div class="contact-info">
