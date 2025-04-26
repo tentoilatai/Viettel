@@ -22,7 +22,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [],
             "styles": ["src/global_styles.css"],
-            "scripts": []
+            "scripts": [],
+            "deployUrl": "/Viettel/",
+            "baseHref": "/Viettel/"
           },
           "configurations": {
             "production": {
@@ -65,6 +67,15 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "branch": "gh-pages",
+            "dir": "dist/demo",
+            "message": "Deploying to GitHub Pages",
+            "nojekyll": true
+          }
         }
       }
     }

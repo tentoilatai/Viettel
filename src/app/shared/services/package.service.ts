@@ -164,87 +164,6 @@ export class PackageService {
         'Hết chu kỳ, gói cước sẽ tự động gia hạn nếu tài khoản đủ tiền',
         'Để hủy gói, soạn HUY C150 gửi 9123'
       ]
-    },
-    {
-      id: 8,
-      name: 'C150',
-      code: 'DK C150',
-      price: 150000,
-      category: 'combo',
-      features: [
-        'Miễn phí 1000 phút gọi nội mạng Viettel',
-        '500 phút gọi ngoại mạng',
-        '3GB data tốc độ cao mỗi ngày',
-        'Miễn phí nhắn tin nội mạng',
-        'Miễn phí nghe nhạc trên ứng dụng iMusic'
-      ],
-      description: 'Gói combo C150 mang đến giải pháp trọn gói với chi phí hợp lý cho người dùng đòi hỏi cao về liên lạc và giải trí. Với C150, bạn có thể thoải mái gọi điện, nhắn tin, lướt web và thưởng thức các dịch vụ giải trí.',
-      period: '30 ngày',
-      registrationMethod: [
-        'Soạn DK C150 gửi 9123',
-        'Qua ứng dụng My Viettel',
-        'Liên hệ cửa hàng Viettel gần nhất'
-      ],
-      termsAndConditions: [
-        'Gói cước áp dụng cho thuê bao di động trả trước và trả sau của Viettel',
-        'Chu kỳ gói cước là 30 ngày kể từ ngày đăng ký thành công',
-        'Hết chu kỳ, gói cước sẽ tự động gia hạn nếu tài khoản đủ tiền',
-        'Để hủy gói, soạn HUY C150 gửi 9123'
-      ]
-    },
-    {
-      id: 8,
-      name: 'C150',
-      code: 'DK C150',
-      price: 150000,
-      category: 'combo',
-      features: [
-        'Miễn phí 1000 phút gọi nội mạng Viettel',
-        '500 phút gọi ngoại mạng',
-        '3GB data tốc độ cao mỗi ngày',
-        'Miễn phí nhắn tin nội mạng',
-        'Miễn phí nghe nhạc trên ứng dụng iMusic'
-      ],
-      description: 'Gói combo C150 mang đến giải pháp trọn gói với chi phí hợp lý cho người dùng đòi hỏi cao về liên lạc và giải trí. Với C150, bạn có thể thoải mái gọi điện, nhắn tin, lướt web và thưởng thức các dịch vụ giải trí.',
-      period: '30 ngày',
-      registrationMethod: [
-        'Soạn DK C150 gửi 9123',
-        'Qua ứng dụng My Viettel',
-        'Liên hệ cửa hàng Viettel gần nhất'
-      ],
-      termsAndConditions: [
-        'Gói cước áp dụng cho thuê bao di động trả trước và trả sau của Viettel',
-        'Chu kỳ gói cước là 30 ngày kể từ ngày đăng ký thành công',
-        'Hết chu kỳ, gói cước sẽ tự động gia hạn nếu tài khoản đủ tiền',
-        'Để hủy gói, soạn HUY C150 gửi 9123'
-      ]
-    },
-    {
-      id: 6,
-      name: 'C150',
-      code: 'DK C150',
-      price: 150000,
-      category: 'combo',
-      features: [
-        'Miễn phí 1000 phút gọi nội mạng Viettel',
-        '500 phút gọi ngoại mạng',
-        '3GB data tốc độ cao mỗi ngày',
-        'Miễn phí nhắn tin nội mạng',
-        'Miễn phí nghe nhạc trên ứng dụng iMusic'
-      ],
-      description: 'Gói combo C150 mang đến giải pháp trọn gói với chi phí hợp lý cho người dùng đòi hỏi cao về liên lạc và giải trí. Với C150, bạn có thể thoải mái gọi điện, nhắn tin, lướt web và thưởng thức các dịch vụ giải trí.',
-      period: '30 ngày',
-      registrationMethod: [
-        'Soạn DK C150 gửi 9123',
-        'Qua ứng dụng My Viettel',
-        'Liên hệ cửa hàng Viettel gần nhất'
-      ],
-      termsAndConditions: [
-        'Gói cước áp dụng cho thuê bao di động trả trước và trả sau của Viettel',
-        'Chu kỳ gói cước là 30 ngày kể từ ngày đăng ký thành công',
-        'Hết chu kỳ, gói cước sẽ tự động gia hạn nếu tài khoản đủ tiền',
-        'Để hủy gói, soạn HUY C150 gửi 9123'
-      ]
     }
   ];
   
@@ -263,8 +182,10 @@ export class PackageService {
   }
   
   sendSMS(packageCode: string): Observable<boolean> {
-    // In a real application, this would call an API to send an SMS
-    console.log(`SMS with code ${packageCode} would be sent in a real app`);
+    const smsNumber = '9123';
+    const smsBody = packageCode;
+    const smsUrl = `sms:${smsNumber}?body=${encodeURIComponent(smsBody)}`;
+    window.location.href = smsUrl;
     return of(true);
   }
 }
